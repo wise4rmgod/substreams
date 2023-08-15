@@ -60,6 +60,13 @@ func WithCollectProtoDefinitions(f func(protoDefinitions []*desc.FileDescriptor)
 	}
 }
 
+func WithConfigurationOverride(configPath string) Options {
+	return func(r *Reader) *Reader {
+
+		return r
+	}
+}
+
 type Reader struct {
 	resolvedInput               string
 	collectProtoDefinitionsFunc func(protoDefinitions []*desc.FileDescriptor)
@@ -75,6 +82,8 @@ type Reader struct {
 	skipPackageValidation          bool
 
 	constructorErr error
+
+	configurationOverride string
 }
 
 func NewReader(input string, opts ...Options) (*Reader, error) {
