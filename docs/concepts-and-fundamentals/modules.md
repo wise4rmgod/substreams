@@ -79,4 +79,4 @@ Notable facts and use cases for working `store` modules include:
 
 ### Additional information
 
-Learn more about [modules in the Developer's guide](../developers-guide/modules/).
+Learn more about [modules in the Developer's guide](../developers-guide/modules/types.md).
